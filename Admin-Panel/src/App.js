@@ -25,13 +25,13 @@ function App() {
 	useEffect(() => {
 		// Fetch API key and user list on component mount
 		fetchApiKey();
-		fetchUsers();
+		// fetchUsers();
 	}, []);
 
 	const fetchApiKey = () => {
 		// Replace with your Nest.js API endpoint to fetch the API key
 		axios
-			.get("/admin/api-key")
+			.get("https://telegram-weather-bot-production-c181.up.railway.app/admin/api-key")
 			.then((response) => {
 				setApiKey(response.data);
 			})
@@ -45,7 +45,7 @@ function App() {
 		const newApiKey = prompt("Enter the new API key:");
 		if (newApiKey) {
 			axios
-				.post("/admin/api-key", { key: newApiKey })
+				.post("https://telegram-weather-bot-production-c181.up.railway.ap/admin/api-key", { key: newApiKey })
 				.then((response) => {
 					alert(response.data);
 					fetchApiKey(); // Refresh the API key after update
@@ -59,7 +59,7 @@ function App() {
 	const deleteUser = (chatId) => {
 		// Send a DELETE request to delete the user
 		axios
-			.delete(`/users/${chatId}`)
+			.delete(`https://telegram-weather-bot-production-c181.up.railway.ap/users/${chatId}`)
 			.then((response) => {
 				// alert(response.data.message);
 				fetchUsers(); // Refresh the user list after deletion
@@ -71,7 +71,7 @@ function App() {
 
 	const blockUser = (chatId) => {
 		axios
-			.post(`users/${chatId}`)
+			.post(`https://telegram-weather-bot-production-c181.up.railway.apusers/${chatId}`)
 			.then((response) => {
 				// alert(response.data.message);
 				fetchUsers(); // Refresh the user list after blocking
@@ -84,7 +84,7 @@ function App() {
 	const fetchUsers = () => {
 		// Replace with your Nest.js API endpoint to fetch the list of users
 		axios
-			.get("/users")
+			.get("https://telegram-weather-bot-production-c181.up.railway.ap/users")
 			.then((response) => {
 				setUsers(response.data);
 			})
