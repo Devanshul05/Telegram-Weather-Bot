@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/Telegram-Weather-Bot/Admin-Panel/static/js/main.a53d2fc0.js",
-    "index.html": "/Telegram-Weather-Bot/Admin-Panel/index.html",
-    "main.a53d2fc0.js.map": "/Telegram-Weather-Bot/Admin-Panel/static/js/main.a53d2fc0.js.map"
+    "main.js": "/Telegram-Weather-Bot/static/js/main.a53d2fc0.js",
+    "index.html": "/Telegram-Weather-Bot/index.html",
+    "main.a53d2fc0.js.map": "/Telegram-Weather-Bot/static/js/main.a53d2fc0.js.map"
   },
   "entrypoints": [
     "static/js/main.a53d2fc0.js"
